@@ -2,6 +2,7 @@ import '../css/general.css'
 import '../css/homePage.css'
 
 import Navbar from '../components/nabar'
+import Card from '../components/card'
 
 const App = () => (
   <div>
@@ -15,7 +16,6 @@ const App = () => (
           <p>We create digital experience at theintersection between design and technology, helping our clients toimagine the future, today.</p>
         </div>
         <div id='rightContent'>
-          <p>test</p>
         </div>
       </div>
     </div>
@@ -29,63 +29,14 @@ const App = () => (
 
     <div id='thirdSection'>
       <div className='cardGroup'>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
+        <Card/>
+        <Card/>
+        <Card/>
       </div>
-
       <div className='cardGroup'>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
-        <div className='card'>
-          <div className='img'></div>
-          <div className='cardDesc'>
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tellus aliquam turpis rhoncus aliquam orci massa. Magna vel suscipit neque nascetur accumsan ullamcorper.</p>
-            <h3>year - 2023</h3>
-            <h3>Made in Blender</h3>
-          </div>
-        </div>
+        <Card/>
+        <Card/>
+        <Card/>
       </div>
     </div>
 

@@ -1,6 +1,5 @@
 #firstSection {
   width: 85%;
-  background-color: rebeccapurple;
   margin: auto;
   height: 610px;
   text-align: left;
@@ -11,34 +10,51 @@
   margin: auto;
   height: 100%;
   flex-wrap: nowrap;
-  background-color: DodgerBlue;
   justify-content: space-between;
 }
 
 #leftContent {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  font-style: bold;
+  
   display: inline-block;
   align-self: flex-end;
 
   padding-bottom: 150px;
   width: 370px;
-  background-color: grey;
+}
+
+#leftContent h1 {
+  color: black;
+  -webkit-text-stroke: 1px white; 
+  text-stroke: 2px white; 
 }
 
 #rightContent {
   width: 50%;
-  margin-right: 10%;
-  background-color: brown;
+  margin-right: 5%;
+  background-image: url('../assets/tempModel.png');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 
-#firstSectionContent h1,h2{
+#firstSectionContent h1{
+  font-size: 30px;
+  margin: 0;
+}
+
+#firstSectionContent h2{
   font-size: 25px;
   margin: 0;
 }
 
 #firstSectionContent p {
-  font-size: 16px;
-  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  margin: 15px 0 0 0;
   padding: 0;
 }
 
@@ -47,14 +63,13 @@
 
 #secondSection {
   font-size: 16px;
-  background-color: red;
   justify-content: center;
   display: grid;
   grid-template-areas:'main main main main';
   gap: 30px;
   justify-content: center;
   margin: 0;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
 }
 
 /*third section*/
@@ -65,13 +80,12 @@
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-  background-color: aquamarine;
+  gap: 95px;
 }
 
 /*Fourth section*/
 
 #fourthSection {
-  padding: 20px  0 40px 0;
+  padding: 60px  0 50px 0;
   font-size: 16px;
 }

@@ -6,25 +6,30 @@
     text-align: center;
     margin: 0 auto 0 auto;
     padding: 0;
+    background-color: black;
     align-items: right;
   }
 
 #Navbar {
     position: sticky;
     top: 0;
-    margin: auto;
+    margin: 0 auto 0 auto;
     width: 85%;
     height: 45px;
-    background-color: wheat;
-    color: black;
+    align-content: center;
+    color: white;
     display: grid;
     grid-template-areas:'main main';
     justify-content:space-between;
 }
 
 #logo {
-    width: 45px;
-    background-color: red;
+    width: 75px;
+    height: 45px;
+    background-image: url(../assets/test.webp);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #aboutLink {
@@ -36,12 +41,10 @@
     margin: auto;
     width: 85%;
     height: 100%;
-    background-color: wheat;
     gap: 50px;
 }
 
 .card {
-    background-color: violet;
     margin: auto;
     width:auto;
     text-align: left;
@@ -68,11 +71,6 @@
 
 
 .card h3 {
-    margin-top: 15px;
+    line-height: 15px;
     font-size: 14px;
-}
-
-.card h1,p, h3 {
-    margin: 0;
-    padding: 0 15px 0 10px;
 }
