@@ -11,7 +11,7 @@ const App = () => (
     <div id='firstSection'>
       <div id='firstSectionContent'>
         <div id='leftContent'>
-          <h1>Inexplicable</h1>
+          <h1>INEXPLICABLE</h1>
           <h2>CREATIONS</h2>
           <p>We create digital experience at theintersection between design and technology, helping our clients toimagine the future, today.</p>
         </div>

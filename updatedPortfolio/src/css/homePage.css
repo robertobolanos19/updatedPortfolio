@@ -1,91 +1,453 @@
-#firstSection {
-  width: 85%;
-  margin: auto;
-  height: 610px;
-  text-align: left;
-}
+/*Extra Small Devices (Mobile Phones)*/
+@media only screen and (max-width: 576px) {
+  body{
+    /* background-color: gray; */
+  }
 
-#firstSectionContent {
-  display: flex;
-  margin: auto;
-  height: 100%;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-#leftContent {
-  font-family: "Alfa Slab One", serif;
-  font-weight: 400;
-  font-style: bold;
+  #firstSection {
+    width: 75%;
+    margin: auto;
+    height: auto;
+    text-align: left;
+  }
   
-  display: inline-block;
-  align-self: flex-end;
+  #firstSectionContent {
+    display: flex;
+    height: auto;
+    flex-wrap: wrap-reverse;
+  }
+  
+  #leftContent {
+    width: 100%;
+    height: fit-content;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: bold;
+  }
 
-  padding-bottom: 150px;
-  width: 370px;
+ #firstSectionContent  #leftContent  h1{
+    color: black;
+    -webkit-text-stroke: 1px white; 
+    text-stroke: 2px white; 
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  h2{
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 0;
+  }
+
+  #rightContent {
+    display: inline-block;
+    height:340px;
+    width: 100%;
+    margin: 0;
+    background-image: url('../assets/tempModel.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /*Second section*/
+  
+  #secondSection {
+    font-size: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:'main main main main';
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*third section cards (cards css in general.css)*/
+  
+  #thirdSection {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  /*Fourth section*/
+  
+  #fourthSection {
+    padding: 20px  0 20px 0;
+    font-size: 16px;
+  }
+
+
 }
 
-#leftContent h1 {
-  color: black;
-  -webkit-text-stroke: 1px white; 
-  text-stroke: 2px white; 
+/*Small Devices tablets, large Phones*/
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  body{
+    /* background-color: forestgreen; */
+  }
+
+  #firstSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    text-align: left;
+  }
+  
+  #firstSectionContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
+  }
+  
+  #leftContent {
+    width: 85%;
+    position: relative;
+    display:inline-block;
+    margin-left: 15%;
+    margin-top: auto;
+    height: fit-content;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: bold;
+  }
+
+ #firstSectionContent  #leftContent  h1{
+    color: black;
+    -webkit-text-stroke: 1px white; 
+    text-stroke: 2px white; 
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  h2{
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 0;
+  }
+
+  #rightContent {
+    display: inline-block;
+    height:340px;
+    width: 100%;
+    margin: 0;
+    background-image: url('../assets/tempModel.png');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  /*Second section*/
+  
+  #secondSection {
+    font-size: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:'main main main main';
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*third section cards (cards css in general.css)*/
+  
+  #thirdSection {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  /*Fourth section*/
+  
+  #fourthSection {
+    padding: 20px  0 20px 0;
+    font-size: 16px;
+  }
 }
 
-#rightContent {
-  width: 50%;
-  margin-right: 5%;
-  background-image: url('../assets/tempModel.png');
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+/*Medium Devices (small laptops, large tablets)*/
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  body {
+    background-color: gray;
+  }
+
+  #firstSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    text-align: left;
+  }
+  
+  #firstSectionContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 35vh;
+  }
+  
+  #leftContent {
+    width: 65%;
+    position: relative;
+    display:inline-block;
+    margin-left: 15%;
+    margin-top: auto;
+    height: fit-content;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: bold;
+  }
+
+ #firstSectionContent  #leftContent  h1{
+    color: black;
+    -webkit-text-stroke: 1px white; 
+    text-stroke: 2px white; 
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  h2{
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 0;
+  }
+
+  #rightContent {
+    display: inline-block;
+    height:90%;
+    width: 100%;
+    margin-left: -15%;
+    margin-top: auto;
+    background-image: url('../assets/tempModel.png');
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+  
+  /*Second section*/
+  
+  #secondSection {
+    font-size: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:'main main main main';
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*third section cards (cards css in general.css)*/
+  
+  #thirdSection {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  /*Fourth section*/
+  
+  #fourthSection {
+    padding: 20px  0 20px 0;
+    font-size: 16px;
+  }
+
 }
 
+/*Large Devices (Laptops, Desktops)*/
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
 
-#firstSectionContent h1{
-  font-size: 30px;
-  margin: 0;
+  body {
+    /* background-color: gray; */
+  }
+
+
+  #firstSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    text-align: left;
+  }
+  
+  #firstSectionContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 35vh;
+  }
+  
+  #leftContent {
+    width: 65%;
+    position: relative;
+    display:inline-block;
+    margin-left: 15%;
+    margin-top: auto;
+    height: fit-content;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: bold;
+  }
+
+ #firstSectionContent  #leftContent  h1{
+    color: black;
+    -webkit-text-stroke: 1px white; 
+    text-stroke: 2px white; 
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  h2{
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 0;
+  }
+
+  #rightContent {
+    display: inline-block;
+    height:90%;
+    width: 100%;
+    margin-left: -15%;
+    margin-top: auto;
+    background-image: url('../assets/tempModel.png');
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+
+  /*Second section*/
+  
+  #secondSection {
+    font-size: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:'main main main main';
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*third section cards (cards css in general.css)*/
+  
+  #thirdSection {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  /*Fourth section*/
+  
+  #fourthSection {
+    padding: 20px  0 20px 0;
+    font-size: 16px;
+  }
+
 }
 
-#firstSectionContent h2{
-  font-size: 25px;
-  margin: 0;
-}
+@media only screen and (min-width: 1201px) {
 
-#firstSectionContent p {
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  margin: 15px 0 0 0;
-  padding: 0;
-}
+  body {
+    /* background-color: aquamarine; */
+  }
 
+  #firstSection {
+    width: 100%;
+    margin: auto;
+    height: auto;
+    text-align: left;
+  }
+  
+  #firstSectionContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 70vh;
+  }
+  
+  #leftContent {
+    width: 65%;
+    position: relative;
+    display:inline-block;
+    margin-left: 15%;
+    margin-top: auto;
+    height: fit-content;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: bold;
+  }
 
-/*Second section*/
+ #firstSectionContent  #leftContent  h1{
+    color: black;
+    -webkit-text-stroke: 1px white; 
+    text-stroke: 2px white; 
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  h2{
+    font-size: 25px;
+    margin: 0;
+  }
+  
+  #firstSectionContent  #leftContent  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding: 0;
+  }
 
-#secondSection {
-  font-size: 16px;
-  justify-content: center;
-  display: grid;
-  grid-template-areas:'main main main main';
-  gap: 30px;
-  justify-content: center;
-  margin: 0;
-  padding-bottom: 30px;
-}
+  #rightContent {
+    display: inline-block;
+    height:90%;
+    width: 100%;
+    margin-left: -15%;
+    margin-top: auto;
+    background-image: url('../assets/tempModel.png');
+    background-position: center;
+    background-size: 85%;
+    background-repeat: no-repeat;
+  }
+  
+  /*Second section*/
+  
+  #secondSection {
+    font-size: 16px;
+    justify-content: center;
+    display: grid;
+    grid-template-areas:'main main main main';
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  /*third section cards (cards css in general.css)*/
+  
+  #thirdSection {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  /*Fourth section*/
+  
+  #fourthSection {
+    padding: 20px  0 20px 0;
+    font-size: 16px;
+  }
 
-/*third section*/
-
-#thirdSection {
-  width: 100%;
-  height: auto;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 95px;
-}
-
-/*Fourth section*/
-
-#fourthSection {
-  padding: 60px  0 50px 0;
-  font-size: 16px;
 }
