@@ -1,50 +1,75 @@
-import '../css/general.css'
-import '../css/homePage.css'
+import Section1 from '../components/Sections/Section1'
+import Section2 from '../components/Sections/Section2'
+import Section3 from '../components/Sections/Section3'
+import Navbar from '../components/navbar/navbar';
 
-import Navbar from '../components/nabar'
-import Card from '../components/card'
+import React, { useState } from 'react';
 
-const App = () => (
-  <div>
+const App = () => {
+  const [data, setData] = useState([
+    {
+      title: 'Project 1',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Freelance',
+    },
+    {
+      title: 'Project 2',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Product',
+    },
+    {
+      title: 'Project 3',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Exploration',
+    },
+    {
+      title: 'Project 4',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Product',
+    },
+    {
+      title: 'Project 5',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Exploration',
+    },
+    {
+      title: 'Project 6',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Freelance',
+    },
+  ]);
 
-    <Navbar/>
-    <div id='firstSection'>
-      <div id='firstSectionContent'>
-        <div id='leftContent'>
-          <h1>INEXPLICABLE</h1>
-          <h2>CREATIONS</h2>
-          <p>We create digital experience at theintersection between design and technology, helping our clients toimagine the future, today.</p>
-        </div>
-        <div id='rightContent'>
-        </div>
-      </div>
+  const [filteredData, setFilteredData] = useState(data);
+
+  const filterData = (category) => {
+    if (category === 'All') {
+      setFilteredData(data);
+    } else {
+      const filtered = data.filter((item) => item.category === category);
+      setFilteredData(filtered);
+    }
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <Section1 />
+      <Section2 filterData={filterData} />
+      <Section3 data={filteredData} />
     </div>
+  );
+};
 
-    <div id='secondSection'>
-        <p>#All</p>
-        <p>#Freelance</p>
-        <p>#Product</p>
-        <p>#Exploration</p>
-    </div>
-
-    <div id='thirdSection'>
-      <div className='cardGroup'>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
-      <div className='cardGroup'>
-        <Card/>
-        <Card/>
-        <Card/>
-      </div>
-    </div>
-
-    <div id='fourthSection'>
-        <p>View All projects</p>
-    </div>
-
-  </div>
-)
-
-export default App
+export default App;

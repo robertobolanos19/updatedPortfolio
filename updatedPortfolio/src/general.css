@@ -1,0 +1,43 @@
+#root {
+    width: 100vw;
+    display: grid;
+    grid-template-areas:'main';
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    align-items: right;
+  }
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .navbar .logo img {
+    width: 50px;
+    height: auto;
+  }
+  
+  .navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    background-color: #555;
+  }
+  
