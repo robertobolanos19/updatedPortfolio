@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Section2 breakdown",
+  "steps": [
+    {
+      "file": "updatedPortfolio/src/components/Sections/Section2.jsx",
+      "description": "handleFilterClick is the key function for making this component work, it has a argument of filter which will be called when a button is clicked, once it is clicked it will set the value of filter to a certain value for explain 'All'. Once handleFilterClick has this value it then sets both setActiveFilter and filterData as the value given from handleFilterClick. \n\nsetActiveFilter uses useState to manage the active button (it has a starting value of 'All'), the activeFilter value is being used to change the css of all the buttons and only giving the matching value of activeFilter the className of 'active'\n\nfilterData is saves the value from handleFilterClick",
+      "line": 4
+    },
+    {
+      "file": "updatedPortfolio/src/pages/Homepage.jsx",
+      "description": "filterData gets its values from filterData which is saved from Section2 (look at Section2 notes if you would like more info), based on the new value of category is sets setFilteredData as a specific value based on the data.filter items that only returns the values of any matching data with category.",
+      "line": 129
+    }
+  ],
+  "ref": "4a449231fa3ca3be40fe8e98a6a21abe4aa254eb"
+}

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import '../Sections/Section2.css';
+import './Section2.css';
 
 const Section2 = ({ filterData }) => {
   const [activeFilter, setActiveFilter] = useState('All');
 
+ 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
     filterData(filter);

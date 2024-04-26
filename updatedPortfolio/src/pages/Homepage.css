@@ -1,0 +1,38 @@
+/* App.css */
+.view-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-more:hover {
+    background-color: #555;
+  }
+  
+  /* App.css */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    opacity: 0.7;
+  }
+  

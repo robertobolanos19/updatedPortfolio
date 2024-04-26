@@ -1,0 +1,26 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Section2 explained",
+  "steps": [
+    {
+      "file": "src/components/Sections/Section2.jsx",
+      "description": "filteredData prop will be used for filtering the data based on the buttons which will be affecting section 3.\n\nwe are using useState hook to manage the the active filter state (it has an initial value of 'All'). The activeFilter value is being used to change the css of the buttons and only allow the matching button with the value of activeFilter to have the className 'active', else the classname of the button isnt active.\n\nwe then follow up and create a function handleFilterClick which has a argument of filter. This function is being used in the sections buttons and will directly be changing the values of both filterData and setActiveFitler. First when a button is clicked the function is called and the value of ex. 'Freelance' is set to both of these values. Once set the new activeFilter will be 'Freelance' and the button corresponding to to this name will be highlighted instead of the initial 'All', the filterData is then saved with the value of 'Freelance'.",
+      "line": 4
+    },
+    {
+      "file": "src/pages/Homepage.jsx",
+      "description": "this is our temp dummy data that will be used to test if our cards work as well as any functionailities that alter or need the data.",
+      "line": 17
+    },
+    {
+      "file": "src/pages/Homepage.jsx",
+      "description": "filterData has the argument of category, initially we have set filterData from Section2 as 'All', if it is 'All' then we save the data to setFilteredData which saves it to filteredData, else if its not 'All' then we create a new value called filtered which calls the variable data and uses the filter method to search for each item in data and uses the argument category and looks for items.category that specifically match the category value, this is then send to setFilteredData and then saved to filteredData",
+      "line": 127
+    },
+    {
+      "file": "src/components/Sections/Section3.jsx",
+      "description": "Section3 has 2 props data and viewMore. first we declare maxCards which will be shown, there is an if-statement for the value of maxCards if viewMore is true then maxCards has a value of data.length, else if its false then maxCards is set to 6. afterwards we must create chunkArrays which will be used to create our rows.\n\nchunkArray has two arguments arr,size. we create an array using different steps:\n1: we set the length based on Math.ceil which returns the smallest int greater than or equal to its numerical argument, we get the arr.length and divide by size (currently these arugments and values are placeholders until chunkArray is called later). \n2: we then use the (_,i) mapping function to call for each index of the new array. A more simple way to explain is that the _ is a placeholder to indicate that the first argument is not used in the mapping function, i is the index of the current element being processed. inside of this function we are using slice on arr, this is being done to create a chink of size based on the i (current element being processed). we are using i * size + size is the ending index for the slice. an example of how this would look:\n\nFor example, if arr is [1, 2, 3, 4, 5, 6, 7] and size is 2, the function will return [[1, 2], [3, 4], [5, 6], [7]].\n\nAfter we created chunkArray we call it with the arguments data.slice(0,maxCards) and 3, The slice is  starting from 0 and up to 'Maxcards'.we then save this called function to rows. \n\nwe then move on to the creation of each div row. we first map out rows and set two arguments row, rowIndex (rowIndex doesnt directly exist, but its represents the index of the current row which is needed to keep track of changes and efficiently update the DOM). There is only one statement, if row.length is equal to 3 then create a new div row and gives a key to both the main card div. \n\nAs well as the row itself we must map out each card that is in the row, we give the function two arguments item,index. we use these to keep track of the card and show its values.",
+      "line": 4
+    }
+  ]
+}

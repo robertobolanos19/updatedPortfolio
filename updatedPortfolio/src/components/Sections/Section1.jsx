@@ -1,9 +1,9 @@
-import '../Sections/Section1.css'
+import './Section1.css';
 import Header from "../header/header";
 
 const Section1 = (props) => {
     return (
-        <>
+        <div className='section1'>
             <div className="container">
             <div className="left">
                 <div className="content">
@@ -19,7 +19,7 @@ const Section1 = (props) => {
                 <img src="https://via.placeholder.com/600x400" alt="placeholder" />
             </div>
             </div>
-        </>
+        </div>
     );
   };
   
