@@ -96,6 +96,15 @@ const App = () => {
       dateCreated:'year - 2021',
       projectType:'Exploration'
     },
+    {
+      title: 'Project 10',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+      image: 'https://via.placeholder.com/300',
+      category: 'Exploration',
+      dateCreated:'year - 2021',
+      projectType:'Exploration'
+    },
   ]);
 
 
@@ -121,7 +130,7 @@ const App = () => {
     setViewMore(!viewMore);
   };
 
-  //*State is based on 'data' which is given to filteredData 
+  //*explained via tours
   const [filteredData, setFilteredData] = useState(data);
 
   const filterData = (category) => {
