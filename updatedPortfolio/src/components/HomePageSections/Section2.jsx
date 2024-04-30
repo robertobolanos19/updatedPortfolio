@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Section2.css';
+import '../HomePageSections/Section2.css';
 
 const Section2 = ({ filterData }) => {
   const [activeFilter, setActiveFilter] = useState('All');

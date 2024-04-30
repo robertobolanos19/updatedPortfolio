@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section3.css';
+import '../HomePageSections/Section3.css';
 
 const Section3 = ({ data, viewMore }) => {
   const maxCards = viewMore ? data.length : 6;
@@ -20,6 +20,7 @@ const Section3 = ({ data, viewMore }) => {
             <div className="row" key={rowIndex}>
               {row.map((item, index) => (
                 <div className="card" key={index}>
+                  <a href={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`}>
                   <div className="image">
                     <img src={item.image} alt={item.title} />
                   </div>
@@ -29,6 +30,7 @@ const Section3 = ({ data, viewMore }) => {
                     <h3>{item.dateCreated}</h3>
                     <h3>{item.projectType}</h3>
                   </div>
+                  </a>
                 </div>
               ))}
             </div>

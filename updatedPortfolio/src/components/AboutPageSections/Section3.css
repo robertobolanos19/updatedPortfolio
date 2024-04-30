@@ -1,0 +1,57 @@
+/* Section3.css */
+.AboutSection3 .container {
+  max-width: 800px;
+  margin: auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.AboutSection3 h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.AboutSection3 .social-links {
+  margin-bottom: 20px;
+}
+
+.AboutSection3 .social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.AboutSection3 .social-links img {
+  width: 40px;
+}
+
+.AboutSection3 form {
+  max-width: 500px;
+  margin: auto;
+}
+
+.AboutSection3 label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.AboutSection3 input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.AboutSection3 button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.AboutSection3 button:hover {
+  background-color: #0056b3;
+}

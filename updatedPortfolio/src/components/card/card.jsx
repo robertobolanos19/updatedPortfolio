@@ -1,9 +1,7 @@
-import '../css/general.css'
-
-const Card = ()=>{
+const Card = (props)=>{
 
     return(
-        <div className='card'>
+        <div className={props.cardHomePage}>
                 <a href="project.html"><div className='img'/></a>
                 <div className='cardDesc'>
                 <h1>Title</h1>

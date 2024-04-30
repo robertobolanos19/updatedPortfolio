@@ -1,14 +1,14 @@
-import Section1 from '../components/Sections/Section1'
-import Section2 from '../components/Sections/Section2'
-import Section3 from '../components/Sections/Section3'
-import Section4 from '../components/Sections/Section4';
+import Section1 from '../components/HomePageSections/Section1'
+import Section2 from '../components/HomePageSections/Section2'
+import Section3 from '../components/HomePageSections/Section3'
+import Section4 from '../components/HomePageSections/Section4';
 
 import Navbar from '../components/navbar/navbar';
 import LoadingScreen from '../components/loader/Loading';
 
 import React, { useState, useEffect } from 'react';
 
-import './Homepage.css'
+import './HomePage.css'
 
 
 const App = () => {
@@ -21,92 +21,91 @@ const App = () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Freelance',
-      dateCreated:'year - 2021',
-      projectType:'Freelance'
+      dateCreated: 'year - 2021',
+      projectType: 'Freelance'
     },
     {
       title: 'Project 2',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Product',
-      dateCreated:'year - 2021',
-      projectType:'Product'
+      dateCreated: 'year - 2021',
+      projectType: 'Product'
     },
     {
       title: 'Project 3',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Exploration',
-      dateCreated:'year - 2021',
-      projectType:'Exploration'
+      dateCreated: 'year - 2021',
+      projectType: 'Exploration'
     },
     {
       title: 'Project 4',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Freelance',
-      dateCreated:'year - 2021',
-      projectType:'Freelance'
+      dateCreated: 'year - 2021',
+      projectType: 'Freelance'
     },
     {
       title: 'Project 5',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Product',
-      dateCreated:'year - 2021',
-      projectType:'Product'
+      dateCreated: 'year - 2021',
+      projectType: 'Product'
     },
     {
       title: 'Project 6',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Exploration',
-      dateCreated:'year - 2021',
-      projectType:'Exploration'
+      dateCreated: 'year - 2021',
+      projectType: 'Exploration'
     },
     {
       title: 'Project 7',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Freelance',
-      dateCreated:'year - 2021',
-      projectType:'Freelance'
+      dateCreated: 'year - 2021',
+      projectType: 'Freelance'
     },
     {
       title: 'Project 8',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Product',
-      dateCreated:'year - 2021',
-      projectType:'Product'
+      dateCreated: 'year - 2021',
+      projectType: 'Product'
     },
     {
       title: 'Project 9',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Exploration',
-      dateCreated:'year - 2021',
-      projectType:'Exploration'
+      dateCreated: 'year - 2021',
+      projectType: 'Exploration'
     },
     {
       title: 'Project 10',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
+        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
       image: 'https://via.placeholder.com/300',
       category: 'Exploration',
-      dateCreated:'year - 2021',
-      projectType:'Exploration'
-    },
+      dateCreated: 'year - 2021',
+      projectType: 'Exploration'
+    }
   ]);
-
 
   //!where code starts :p
 

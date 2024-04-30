@@ -1,8 +1,7 @@
-import '../css/project.css'
-import '../css/general.css'
+import './ProjectPage.css'
 
-import Navbar from '../components/nabar'
-import Card from '../components/card'
+import Navbar from '../components/navbar/navbar'
+import Card from '../components/card/card'
 
 const App = () => (
   <div>

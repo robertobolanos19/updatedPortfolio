@@ -1,0 +1,54 @@
+/* Section2.css */
+.AboutSection2 .container {
+  max-width: 80%;
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.AboutSection2 .row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.AboutSection2 .card {
+  width: calc(35% - 50px); /* Changed width to 33.33% */
+  margin: 0 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.AboutSection2 .content {
+  padding: 20px;
+}
+
+.AboutSection2 .card h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.AboutSection2 .card h2 {
+  line-height: 35px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .AboutSection2 .card {
+    background-color: blueviolet;
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .AboutSection2 .card {
+    align-items: center;
+    background-color: aquamarine;
+    width: calc(100% - 20px);
+  }
+}
