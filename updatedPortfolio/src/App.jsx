@@ -16,7 +16,8 @@ const App = () => {
         image: 'https://via.placeholder.com/300',
         category: 'Freelance',
         dateCreated: 'year - 2021',
-        projectType: 'Freelance'
+        projectType: 'Freelance',
+        model: '/dummyModels/test.glb'
       },
       {
         title: 'Project 2',
