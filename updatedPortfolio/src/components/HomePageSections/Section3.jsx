@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../HomePageSections/Section3.css';
 
 const Section3 = ({ data, viewMore }) => {
@@ -20,17 +21,17 @@ const Section3 = ({ data, viewMore }) => {
             <div className="row" key={rowIndex}>
               {row.map((item, index) => (
                 <div className="card" key={index}>
-                  <a href={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`}>
-                  <div className="image">
-                    <img src={item.image} alt={item.title} />
-                  </div>
-                  <div className="content">
-                    <h1>{item.title}</h1>
-                    <p>{item.description}</p>
-                    <h3>{item.dateCreated}</h3>
-                    <h3>{item.projectType}</h3>
-                  </div>
-                  </a>
+                  <Link to={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`} className="project-link">
+                    <div className="image">
+                      <img src={item.image} alt={item.title} />
+                    </div>
+                    <div className="content">
+                      <h1>{item.title}</h1>
+                      <p>{item.description}</p>
+                      <h3>{item.dateCreated}</h3>
+                      <h3>{item.projectType}</h3>
+                    </div>
+                  </Link>
                 </div>
               ))}
             </div>

@@ -15,12 +15,19 @@
 }
 
 .section3 .card {
-  width: calc(35% - 50px); /* Changed width to 33.33% */
+  position: relative;
+  width: calc(35% - 50px);
   margin: 0 10px;
   border: 1px solid #ccc;
   border-radius: 25px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.section3 .card:hover {
+  transform: scale(1.05);
 }
 
 .section3 .image {
@@ -34,6 +41,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.section3 .card:hover .image img {
+  filter: grayscale(100%) contrast(150%) brightness(120%);
 }
 
 .section3 .content {

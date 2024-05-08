@@ -1,0 +1,47 @@
+/* Section2.css */
+.section2 {
+    padding: 50px 0;
+  }
+  
+  .section2 .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section2 .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .section2 .card {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .section2 .image {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .section2 .image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+  }
+  
+  .section2 .image img:hover {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 1024px) {
+    .section2 .card {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section2 .card {
+      width: calc(100% - 20px);
+    }
+  }

@@ -1,37 +1,77 @@
-import './ProjectPage.css'
+import React, { useRef, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import Navbar from '../components/navbar/navbar';
+import '../pages/ProjectPage.css'
 
-import Navbar from '../components/navbar/navbar'
-import Card from '../components/card/card'
+const ProjectPage = ({ data }) => {
+  const { title } = useParams();
+  const project = data.find(
+    (item) => item.title.toLowerCase().replace(/ /g, '-') === title
+  );
 
-const App = () => (
-  <div>
-    <Navbar/>
-    <div id='firstSection'>
-      <div id='firstSectionContent'>
-        <div id='leftContent'>
-          <h1 id='title'>Gundam</h1>
-          <h1>“You, people down there, are you satisfied with the way the world is? As for me… I hate it.” – Lockon Stratos</h1>
-          <p>Death Stranding is a game  like no other, it was actually one of the few games I found myself  returning to and replaying over and over again. The way Hideo Kojima  used audio for both background audio and gameplay was brilliant. I was  inspired to create these concept 3D model headphones to enhance the  calming music as well as pick up the movement of the BT’s that are  nearby.</p>
-          <div id='subContent'>
-            <h5 className='tag'>Focus</h5>
-            <h5>3D Modeling</h5>
-            <h5 className='tag'>Services</h5>
-            <h5>Render / 3D Design</h5>
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+
+    // Initialize three.js scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor('black');
+
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
+
+    camera.position.z = 5;
+
+    const animate = function () {
+      requestAnimationFrame(animate);
+
+      cube.rotation.x += 0.01;
+      cube.rotation.y += 0.01;
+
+      renderer.render(scene, camera);
+    };
+
+    animate();
+
+    return () => {
+      // Clean up three.js scene
+      renderer.dispose();
+      scene.remove(cube);
+    };
+  }, []);
+
+  return (
+    <div>
+      <Navbar HomeLocation="/" AboutLocation="/about" />
+      <div className="canvas-container">
+        <canvas ref={canvasRef} />
+        <div className="project-details">
+          <h1>{project.title}</h1>
+          <p>{project.description}</p>
+          <div className="project-info">
+            <p>Date Created: {project.dateCreated}</p>
+            <p>Project Type: {project.projectType}</p>
           </div>
         </div>
-        <div id='rightContent'>
-        </div>
       </div>
-
-      <div>
-        <div className='cardGroup'>
-          <Card name=''/>
-          <Card/>
-          <Card/>
-        </div>
+      <div className="other-projects">
+        <div className="projectCard"></div>
+        <div className="projectCard"></div>
+        <div className="projectCard"></div>
       </div>
     </div>
-  </div>
-)
+  );
+};
 
-export default App
+export default ProjectPage;

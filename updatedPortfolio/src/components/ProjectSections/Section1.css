@@ -1,0 +1,52 @@
+/* Section1.css */
+.section1 {
+    padding: 50px 0;
+  }
+  
+  .section1 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section1 .content {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .section1 .content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .section1 .content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .section1 .content p {
+    font-size: 18px;
+  }
+  
+  .section1 .image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .section1 .image img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .section1 .container {
+      flex-direction: column;
+    }
+  
+    .section1 .content {
+      padding: 0;
+      text-align: center;
+    }
+  }

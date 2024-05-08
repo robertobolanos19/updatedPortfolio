@@ -11,104 +11,9 @@ import React, { useState, useEffect } from 'react';
 import './HomePage.css'
 
 
-const App = () => {
-
-  //*State is being used to create fake data, data will be used for our cards and filters
-  const [data, setData] = useState([
-    {
-      title: 'Project 1',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim neque vitae libero volutpat, sit amet tristique eros volutpat. Nullam rhoncus euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Freelance',
-      dateCreated: 'year - 2021',
-      projectType: 'Freelance'
-    },
-    {
-      title: 'Project 2',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Product',
-      dateCreated: 'year - 2021',
-      projectType: 'Product'
-    },
-    {
-      title: 'Project 3',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Exploration',
-      dateCreated: 'year - 2021',
-      projectType: 'Exploration'
-    },
-    {
-      title: 'Project 4',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Freelance',
-      dateCreated: 'year - 2021',
-      projectType: 'Freelance'
-    },
-    {
-      title: 'Project 5',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Product',
-      dateCreated: 'year - 2021',
-      projectType: 'Product'
-    },
-    {
-      title: 'Project 6',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Exploration',
-      dateCreated: 'year - 2021',
-      projectType: 'Exploration'
-    },
-    {
-      title: 'Project 7',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Freelance',
-      dateCreated: 'year - 2021',
-      projectType: 'Freelance'
-    },
-    {
-      title: 'Project 8',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Product',
-      dateCreated: 'year - 2021',
-      projectType: 'Product'
-    },
-    {
-      title: 'Project 9',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Exploration',
-      dateCreated: 'year - 2021',
-      projectType: 'Exploration'
-    },
-    {
-      title: 'Project 10',
-      description:
-        's euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.',
-      image: 'https://via.placeholder.com/300',
-      category: 'Exploration',
-      dateCreated: 'year - 2021',
-      projectType: 'Exploration'
-    }
-  ]);
+const HomePage = ({data}) => {
 
   //!where code starts :p
-
 
   const [loading, setLoading] = useState(true); // State to manage loading
 
@@ -142,12 +47,13 @@ const App = () => {
   };
 
   return (
+  
     <div>
             {loading ? ( // Conditionally render the LoadingScreen component
         <LoadingScreen />
       ) : (
       <>
-        <Navbar />
+        <Navbar HomeLocation='/' AboutLocation='/about'/>
         <Section1 />
         <Section2 filterData={filterData} />
         <Section3 data={filteredData} viewMore={viewMore} />
@@ -158,4 +64,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default HomePage;
