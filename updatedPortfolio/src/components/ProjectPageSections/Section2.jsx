@@ -1,6 +1,6 @@
 // Section2.jsx
 import React from 'react';
-import './Section2.css';
+// import '../ProjectPageSections/Section2.css';
 
 const Section2 = () => {
   const images = [

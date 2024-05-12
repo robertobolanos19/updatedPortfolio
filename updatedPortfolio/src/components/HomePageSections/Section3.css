@@ -1,11 +1,12 @@
 /* Section3.css */
-.section3 .container {
+.section3 .section3Container {
+  background-color: rebeccapurple;
   max-width: 80%;
-  padding: 0;
-  display: flex;
   margin: auto;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative; /* Make it relative */
 }
 
 .section3 .row {
@@ -15,8 +16,7 @@
 }
 
 .section3 .card {
-  position: relative;
-  width: calc(35% - 50px);
+  width: 350px;
   margin: 0 10px;
   border: 1px solid #ccc;
   border-radius: 25px;
@@ -68,18 +68,39 @@
   margin-bottom: 5px;
 }
 
+@media (max-width: 1400px) {
+  .section3 .card {
+    width: calc(30% - 20px);
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .section3 .card {
-    background-color: blueviolet;
     width: calc(50% - 20px);
     margin-bottom: 20px;
+    background-color: aqua;
   }
 }
 
 @media (max-width: 768px) {
   .section3 .card {
-    align-items: center;
-    background-color: aquamarine;
+    width: calc(70% - 20px);
+    margin-bottom: 20px;
+
+  }
+}
+
+@media (max-width: 600px) {
+  .section3 .card {
+    width: calc(75% - 20px);
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .section3 .card {
     width: calc(100% - 20px);
+    margin-bottom: 20px;
   }
 }

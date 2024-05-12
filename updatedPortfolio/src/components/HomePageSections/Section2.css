@@ -1,18 +1,21 @@
 /* Section2.css */
 .section2 {
   width: 100%;
-  color: white;
+  color: black;
   padding: 0px;
   margin: auto;
+  display: flex;
+  flex-direction: column; /* Adjust flex direction */
+  position: relative; /* Make it relative */
 }
 
 .section2 .container {
   width: 100%;
-  padding: 0 0px;
+  padding: 50px 0px 0px 0;
   margin-bottom: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: center; /* Center the buttons */
+  justify-content: center;
 }
 
 .section2 .container button {
@@ -20,18 +23,57 @@
   background-color: transparent;
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 24px;
   margin: 0 10px; /* Adjusted */
   cursor: pointer;
+}
+
+.section2 .container button:hover {  
+  background-color: #555;
+  color: black;
+  border-radius: 20px;
 }
 
 .section2 .container button.active {
   border-radius: 20px;
   background-color: #555;
+  color: white;
 }
 
 @media (max-width: 768px) {
   .section2 .container button {
-    padding: 10px 10px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 .card {
+    align-items: center;
+    background-color: aquamarine;
+    width: calc(70% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .section2 .container {
+    margin: auto auto 30px auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(85%);
+  }
+}
+
+@media (max-width: 450px) {
+  .section2 .container {
+    margin: auto auto 30px auto;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(70%);
   }
 }

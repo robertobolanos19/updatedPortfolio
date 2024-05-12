@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Home from './pages/HomePage.jsx';
 import About from './pages/AboutPage';
 import ProjectPage from './pages/ProjectPage'; // Import the ProjectPage component
+import './App.css'
 
 const App = () => {
 

@@ -15,7 +15,7 @@ const Section3 = ({ data, viewMore }) => {
 
   return (
     <section className="section3">
-      <div className="container">
+      <div className="section3Container">
         {rows.map((row, rowIndex) => (
           (row.length === 3 || viewMore) && ( // Only create a row if it has 3 cards or viewMore is true
             <div className="row" key={rowIndex}>

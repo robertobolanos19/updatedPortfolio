@@ -8,8 +8,7 @@ import LoadingScreen from '../components/loader/Loading';
 
 import React, { useState, useEffect } from 'react';
 
-import './HomePage.css'
-
+import '../pages/HomePage.css'
 
 const HomePage = ({data}) => {
 
