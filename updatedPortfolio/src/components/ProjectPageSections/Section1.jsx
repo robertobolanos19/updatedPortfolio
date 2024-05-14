@@ -2,19 +2,21 @@
 import React from 'react';
 import ThreeJsBanner from '../ThreeJs/project';
 import Header from '../header/header';
-// import './Section1.css';
+import '../ProjectPageSections/Section1.css'
 
 const Section1 = ({ name, description, image }) => {
+
+  console.log(name)
   return (
-    <section className="section1">
-      <ThreeJsBanner/>
-      <div className="left">
-          <div className="content">
-            <Header title={name}/>
-            <p>{description}</p>
-          </div>
+    <div className='projectSection1'>
+        <ThreeJsBanner/>
+        <div className="container">
+            <div className="content">
+                <Header title={name}/>
+                <p>{description}</p>
+            </div>
         </div>
-    </section>
+    </div>
   );
 };
 

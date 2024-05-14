@@ -1,9 +1,12 @@
 /* App.css */
- html, body {
-  height: fit-content;
-  padding: 0;
-  margin: 0;
+html, body {
   background-color: black;
+  margin: 0;
+  height: 100%; /* Setting both the elements height to 100% */
+}
+
+body {
+   background-repeat: no-repeat; 
 }
 
 a {

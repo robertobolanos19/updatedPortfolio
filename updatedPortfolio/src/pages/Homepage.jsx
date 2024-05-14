@@ -47,7 +47,7 @@ const HomePage = ({data}) => {
 
   return (
   
-    <div>
+    <div className='homePageMainDiv'>
             {loading ? ( // Conditionally render the LoadingScreen component
         <LoadingScreen />
       ) : (

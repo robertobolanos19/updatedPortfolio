@@ -21,7 +21,7 @@ const Section3 = ({ data, viewMore }) => {
             <div className="row" key={rowIndex}>
               {row.map((item, index) => (
                 <div className="card" key={index}>
-                  <Link to={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`} className="project-link">
+                  <Link name={item.title} to={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`} className="project-link">
                     <div className="image">
                       <img src={item.image} alt={item.title} />
                     </div>

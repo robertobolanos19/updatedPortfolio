@@ -1,46 +1,95 @@
-.section1 {
+/* Section1.css */
+.projectSection1 {
   display: flex;
-  flex-direction: column; /* Adjust flex direction */
-  position: relative; /* Make it relative */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.projectSection1 .container {
+  display: flex;
+  max-width: 75%;
+  margin: auto;
+  flex: 1;
   background-color: transparent;
   z-index: 2;
+  align-items: flex-start;
 }
 
-.section1 .container {
-  display: flex;
-  flex: 1; /* Take remaining height */
-  background-color: transparent;
-  z-index: 2; /* Set a higher z-index to bring the section content forward */
+.projectSection1 .content {
+  margin-top: 160px;
+  width: 35%;
+  border-radius: 10px;
 }
 
-.section1 .left {
-  flex: 1;
-  padding: 20px;
-  background-color: transparent;
-}
-
-.section1 .content {
-  padding: 20px;
-  margin-top: 160px; /* Adjust the margin */
-  width: 40%; /* Adjust the width */
-  border-radius: 10px; /* Add border radius */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow */
-}
-
-.section1 .content h1 {
-  font-size: 34px; /* Adjust heading font size */
+.projectSection1 .content h1 {
+  font-size: 34px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.section1 .content h2 {
-  font-size: 30px; /* Adjust heading font size */
+.projectSection1 .content h2 {
+  font-size: 30px;
   text-transform: uppercase;
 }
 
-.section1 .content p {
-  font-size: 16px; /* Adjust paragraph font size */
+.projectSection1 .content p {
+  font-size: 16px;
 }
 
+@media (min-width: 1440px) {
+  .projectSection1 .container {
+    max-width: 1116px;
+  }
+}
 
+@media (max-width: 600px) {
+  .projectSection1 .container {
+    max-width: 90%;
+  }
 
+  .projectSection1 .content {
+    width:65%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .projectSection1 .container {
+    max-width: 80%;
+  }
+
+  .projectSection1 .content {
+    width:45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectSection1 .container {
+    max-width: 80%;
+  }
+
+  .projectSection1 .content {
+    width:55%;
+  }
+}
+
+@media (max-width: 600px) {
+  .projectSection1 .container {
+    max-width: 80%;
+  }
+
+  .projectSection1 .content {
+    width:65%;
+  }
+}
+
+@media (max-width: 450px) {
+  .projectSection1 .container {
+    max-width: 80%;
+  }
+
+  .projectSection1 .content {
+    width:65%;
+  }
+}

@@ -1,6 +1,6 @@
 // Section2.jsx
 import React from 'react';
-// import '../ProjectPageSections/Section2.css';
+import '../ProjectPageSections/Section2.css';
 
 const Section2 = () => {
   const images = [
@@ -11,7 +11,7 @@ const Section2 = () => {
   ];
 
   return (
-    <section className="section2">
+    <section className="projectSection2">
       <div className="container">
         <div className="row">
           {images.map((imageUrl, index) => (
