@@ -1,51 +1,5 @@
-/* ProjectPage.css */
-.mainDiv {
-  height: 100%;
-}
-
-.project-details {
-  background-color: transparent;
-  text-align: center;
-  margin: 0% auto;
-  max-width: 100%;
-  height: 100%;
-  padding: 0;
-}
-
-.project-details h1 {
-  font-size: 2rem;
-}
-
-.project-details p {
-  font-size: 1rem;
-}
-
-.project-info {
-  margin-top: 20px;
-}
-
-.project-info p {
-  font-size: 0.9rem;
-}
-
-.other-projects {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  background-color: transparent;
-}
-
-.projectCard {
-  width: 250px;
-  height: 350px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Center ThreeJsBanner */
-.project-details {
-  position: relative;
+.ProjectPageMainDiv {
+    height: 100%;
+    background-color: black;
+    padding-bottom: 30px;
 }

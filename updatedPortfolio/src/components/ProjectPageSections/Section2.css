@@ -1,20 +1,14 @@
 /* Section2.css */
   
 .projectSection2 {
-  margin-top: 30px;
-  position: relative;
-  height: auto;
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative; /* Make it relative */
 }
 
-  .projectSection2 .container {
-    max-width: 80%;
-    margin: auto;
-    display: flex;
-    height: fit-content;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative; /* Make it relative */
-  }
   
   .projectSection2 .row {
     display: flex;
@@ -51,38 +45,33 @@
     .projectSection2 .card {
       width: calc(30% - 20px);
       margin-bottom: 20px;
-      background-color: rebeccapurple;
     }
   }
   
   @media (max-width: 1024px) {
     .projectSection2 .card {
-      width: calc(80% - 20px);
-      margin-bottom: 20px;
-      background-color: aqua;
+      width: calc(55% - 20px);
+      margin: auto auto 30px auto;
     }
   }
   
   @media (max-width: 768px) {
     .projectSection2 .card {
-      width: calc(70% - 20px);
-      margin-bottom: 20px;
-      background-color: red;
+      width: calc(55% - 20px);
+      margin: auto auto 30px auto;
     }
   }
   
   @media (max-width: 600px) {
     .projectSection2 .card {
-      width: calc(75% - 20px);
-      margin-bottom: 20px;
-      background-color: yellow;
+      width: calc(85% - 20px);
+      margin: auto auto 30px auto;
     }
   }
   
   @media (max-width: 450px) {
     .projectSection2 .card {
-      width: calc(100% - 20px);
-      margin-bottom: 20px;
-      background-color: green;
+      width: calc(85% - 20px);
+      margin: auto auto 30px auto;
     }
   }

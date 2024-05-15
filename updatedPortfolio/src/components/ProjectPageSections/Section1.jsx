@@ -4,9 +4,9 @@ import ThreeJsBanner from '../ThreeJs/project';
 import Header from '../header/header';
 import '../ProjectPageSections/Section1.css'
 
-const Section1 = ({ name, description, image }) => {
+const Section1 = ({model, name, description, image }) => {
 
-  console.log(name)
+  console.log(model)
   return (
     <div className='projectSection1'>
         <ThreeJsBanner/>

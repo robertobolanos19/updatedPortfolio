@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { Scene, PerspectiveCamera, WebGLRenderer, AmbientLight, DirectionalLight, Vector3 } from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'; // Import GLTFLoader
-import './project.css'; // Import CSS file
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'; // Import DRACOLoader
+import './project.css'; 
 
 const ThreeJsBanner = ({ project }) => {
   const canvasRef = useRef(null);
@@ -11,17 +12,21 @@ const ThreeJsBanner = ({ project }) => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const loader = new GLTFLoader();
+    const dracoLoader = new DRACOLoader(); // Create DRACOLoader instance
+
+    // Tell GLTFLoader to use DRACOLoader for draco compressed files
+    loader.setDRACOLoader(dracoLoader);
 
     // Initialize three.js scene
     const scene = new Scene();
     const camera = new PerspectiveCamera(
       75,
-      canvas.clientWidth / canvas.clientHeight, // Adjust aspect ratio based on the canvas
+      canvas.clientWidth / canvas.clientHeight,
       0.1,
       1000
     );
     const renderer = new WebGLRenderer({ canvas, antialias: true });
-    renderer.setClearColor('transparent');
+    renderer.setClearColor('red');
 
     // Add ambient light
     const ambientLight = new AmbientLight(0xffffff, 0.5);
@@ -44,14 +49,13 @@ const ThreeJsBanner = ({ project }) => {
 
     // Load the model (GLB or GLTF)
     if (project) {
+      console.log(project.model)
       loader.load(
         project.model,
         (gltf) => {
-          // Store the model reference
           modelRef.current = gltf.scene;
-          // Adjust model position and scale
-          gltf.scene.position.set(0, 0, -10); // Adjust the model position
-          gltf.scene.scale.set(8, 8, 8); // Adjust the model scale
+          gltf.scene.position.set(0, 0, -10);
+          gltf.scene.scale.set(8, 8, 8);
           scene.add(gltf.scene);
         },
         undefined,
@@ -60,15 +64,12 @@ const ThreeJsBanner = ({ project }) => {
         }
       );
     } else {
-      // Load local model if project parameter is not provided
       loader.load(
-        '/dummyModels/test.glb',
+        '/dummyModels/test2.glb',
         (gltf) => {
-          // Store the model reference
           modelRef.current = gltf.scene;
-          // Adjust model position and scale
-          gltf.scene.position.set(2, 0, 0); // Adjust the model position
-          gltf.scene.scale.set(5, 5, 5); // Adjust the model scale
+          gltf.scene.position.set(0, 0, 0);
+          gltf.scene.scale.set(5, 5, 5);
           scene.add(gltf.scene);
         },
         undefined,
@@ -76,6 +77,9 @@ const ThreeJsBanner = ({ project }) => {
           console.error('Error loading local model', error);
         }
       );
+      
+      
+      
     }
 
     camera.position.z = 5;
@@ -95,7 +99,6 @@ const ThreeJsBanner = ({ project }) => {
       resizeRendererToDisplaySize();
       requestAnimationFrame(animate);
 
-      // Rotate the model
       if (modelRef.current) {
         const distance = modelRef.current.position.distanceTo(cameraRef.current.position);
         const threshold = 5;
@@ -115,7 +118,6 @@ const ThreeJsBanner = ({ project }) => {
     animate();
 
     return () => {
-      // Clean up three.js scene
       renderer.dispose();
       scene.remove();
       window.removeEventListener('mousemove', onMouseMove);

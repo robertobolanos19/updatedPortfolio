@@ -1,12 +1,14 @@
 // Section1.jsx
 import React from 'react';
+import ThreeJsBanner from '../ThreeJs/project';
 import './Section1.css'
 
 const Section1 = () => {
+  const model = '/dummyModels/test.glb'
   return (
     <section className='AboutSection1'>
+      <ThreeJsBanner/>        
       <div className="container">
-        <img src="https://via.placeholder.com/600x400" alt="placeholder" />
         <h1>About Me</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et

@@ -6,6 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 
 .AboutSection2 .row {
@@ -38,17 +40,20 @@
 }
 
 @media (max-width: 1024px) {
+
+  .AboutSection2 .row {
+    width: 70%
+  }
+
   .AboutSection2 .card {
-    background-color: blueviolet;
-    width: calc(50% - 20px);
-    margin-bottom: 20px;
+    align-items: center;
+    width: calc(100% - 20px);
   }
 }
 
 @media (max-width: 768px) {
   .AboutSection2 .card {
     align-items: center;
-    background-color: aquamarine;
     width: calc(100% - 20px);
   }
 }

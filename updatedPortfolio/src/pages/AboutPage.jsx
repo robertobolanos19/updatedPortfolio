@@ -5,9 +5,11 @@ import Section2 from '../components/AboutPageSections/Section2.jsx';
 import Section3 from '../components/AboutPageSections/Section3.jsx';
 import Navbar from '../components/navbar/navbar.jsx';
 
+import './AboutPage.css'
+
 const AboutPage = () => {
   return (
-    <div>
+    <div className='AboutPageMainDiv'>
         <Navbar HomeLocation='/' AboutLocation='/about'/>
         <Section1 />
         <Section2 />

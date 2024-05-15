@@ -16,11 +16,11 @@ const ProjectPage = ({ data }) => {
   );
 
   return (
-    <>
+    <div className='ProjectPageMainDiv'>
       <Navbar HomeLocation="/" AboutLocation="/about" />
-      <Section1 name={project.title} description={project.description}/>
-      <Section2/>
-    </>
+      <Section1 model={project.model} name={project.title} description={project.description}/>
+      <Section2 data={project}/>
+    </div>
   );
 };
 
