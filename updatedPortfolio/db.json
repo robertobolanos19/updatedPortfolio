@@ -1,0 +1,108 @@
+{
+    "projects": [
+        {
+            "title": "project1", 
+            "description": "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Exploration",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "Project 2",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test4.glb" 
+        },
+        {
+            "title": "Project 3",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "project 4", 
+            "description": "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Exploration",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "Project 5",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test4.glb" 
+        },
+        {
+            "title": "Project 6",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "project7", 
+            "description": "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Exploration",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "Project 8",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test4.glb" 
+        },
+        {
+            "title": "Project 9",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Product",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "project 10", 
+            "description": "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Exploration",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test.glb" 
+        },
+        {
+            "title": "Project 11",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Product",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test4.glb" 
+        },
+        {
+            "title": "Project 12",
+            "description":
+              "s euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi  euismod ipsum, sit amet dictum purus hendrerit ut. Ut consequat nisi ut metus malesuada, in eleifend ipsum accumsan.",
+            "category": "Freelance",
+            "dateCreated": "year - 2021",
+            "image": "/imgs/whiteStill.png",
+            "model": "/dummyModels/test4.glb" 
+        }
+    ]
+}

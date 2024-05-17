@@ -2,6 +2,7 @@
 html, body {
   background-color: black;
   margin: 0;
+  color: white;
   height: 100%; /* Setting both the elements height to 100% */
 }
 

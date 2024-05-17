@@ -3,16 +3,22 @@
   "title": "Section2 explained",
   "steps": [
     {
-      "file": "src/pages/Homepage.jsx",
-      "description": "filterData has the argument of category, initially we have set filterData from Section2 as 'All', if it is 'All' then we save the data to setFilteredData which saves it to filteredData, else if its not 'All' then we create a new value called filtered which calls the variable data and uses the filter method to search for each item in data and uses the argument category and looks for items.category that specifically match the category value, this is then send to setFilteredData and then saved to filteredData",
-      "line": 127,
-      "title": "Homepage filterData explained"
+      "file": "src/components/HomePageSections/Section2.jsx",
+      "description": "handleFilterClick created to handle changes for when a button is clicked, each button has their corresponding values matching their sections ex. 'Freelance', if the current active button is freelance nothing will happen since the activeFilter is set to freelance and the filteredData is only showing freelance items, but if the button 'All' was clicked then first the setActiveFilter is set to 'All' filterData will be updated to 'All' these values are then sent back to the main page where this component is set.",
+      "line": 5,
+      "title": "homePageSection2 component"
     },
     {
       "file": "src/pages/Homepage.jsx",
-      "description": "this is our temp dummy data that will be used to test if our cards work as well as any functionailities that alter or need the data.",
-      "line": 17,
-      "title": "Homepage dummy data explained"
+      "description": "Section 2 is based on buttons that will set active values that will change which cards are shown in sectoion 3, for this section to work I needed to create three functions: filteredData, setActive, and activeFilter.\n\nfilteredData has a parameter of category, when the page is loaded the current activeFilter is set to 'All' which is sent to Section2 and since there is a matching button called 'All' the filterData setsFilteredData to data meaning it just shows all the data in the db. else if a button is clicked say 'freelance' the function filteredData creats a new const filtered which looks through the data in the db and looks for any items that match the category then set the filteredData as filtered. (this filtered data is needed for section3)\n",
+      "line": 64,
+      "title": "homePagesection2"
+    },
+    {
+      "file": "src/pages/Homepage.jsx",
+      "description": "section3 is based off section2's returned data it has two props data and view more,\nview more has a base value of false. and data is based on the returned filteredData from section2.",
+      "line": 65,
+      "title": "homePageSection3"
     },
     {
       "file": "src/components/Sections/Section2.jsx",

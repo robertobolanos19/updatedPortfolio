@@ -6,9 +6,11 @@ const Section3 = ({ data, viewMore }) => {
   const maxCards = viewMore ? data.length : 6;
 
   const chunkArray = (arr, size) => {
-    return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
+    const numChunks = Math.ceil(arr.length / size);
+    const chunks = Array.from({ length: numChunks }, (_, i) =>
       arr.slice(i * size, i * size + size)
     );
+    return chunks;
   };
 
   const rows = chunkArray(data.slice(0, maxCards), 3);
@@ -17,11 +19,17 @@ const Section3 = ({ data, viewMore }) => {
     <section className="section3">
       <div className="section3Container">
         {rows.map((row, rowIndex) => (
-          (row.length === 3 || viewMore) && ( // Only create a row if it has 3 cards or viewMore is true
+          (row.length === 3 || viewMore) && (
             <div className="row" key={rowIndex}>
               {row.map((item, index) => (
                 <div className="card" key={index}>
-                  <Link name={item.title} to={`/project/${item.title.toLowerCase().replace(/ /g, '-')}`} className="project-link">
+                  <Link
+                    to={{
+                      pathname: `/project/${item.id}`,
+                      state: { item: item, projects: data }
+                    }}
+                    className="project-link"
+                  >
                     <div className="image">
                       <img src={item.image} alt={item.title} />
                     </div>
@@ -29,7 +37,7 @@ const Section3 = ({ data, viewMore }) => {
                       <h1>{item.title}</h1>
                       <p>{item.description}</p>
                       <h3>{item.dateCreated}</h3>
-                      <h3>{item.projectType}</h3>
+                      <h3>{item.category}</h3>
                     </div>
                   </Link>
                 </div>

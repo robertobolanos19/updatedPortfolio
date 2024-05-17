@@ -18,7 +18,7 @@ const Section3 = () => {
         <FaLinkedin size={30} />
       </a>
       <a
-        href="https://www.instagram.com/"
+        href="https://www.instagram.com/inexplicable_creations/"
         target="_blank"
         rel="noopener noreferrer"
       >

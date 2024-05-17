@@ -2,7 +2,7 @@
   
 .projectSection2 {
   max-width: 80%;
-  margin: auto;
+  margin: 120px auto auto auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

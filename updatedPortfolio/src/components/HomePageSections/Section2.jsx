@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../HomePageSections/Section2.css';
 
-const Section2 = ({ filterData }) => {
-  const [activeFilter, setActiveFilter] = useState('All');
+const Section2 = ({ filterData, setActiveFilter, activeFilter }) => {
 
- 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
     filterData(filter);

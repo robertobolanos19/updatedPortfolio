@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { Scene, PerspectiveCamera, WebGLRenderer, AmbientLight, DirectionalLight, Vector3 } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'; // Import DRACOLoader
-import './project.css'; 
+import './project.css';
 
 const ThreeJsBanner = ({ project }) => {
   const canvasRef = useRef(null);
@@ -19,14 +19,9 @@ const ThreeJsBanner = ({ project }) => {
 
     // Initialize three.js scene
     const scene = new Scene();
-    const camera = new PerspectiveCamera(
-      75,
-      canvas.clientWidth / canvas.clientHeight,
-      0.1,
-      1000
-    );
+    const camera = new PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
     const renderer = new WebGLRenderer({ canvas, antialias: true });
-    renderer.setClearColor('red');
+    renderer.setClearColor('clear');
 
     // Add ambient light
     const ambientLight = new AmbientLight(0xffffff, 0.5);
@@ -47,39 +42,40 @@ const ThreeJsBanner = ({ project }) => {
 
     window.addEventListener('mousemove', onMouseMove, false);
 
-    // Load the model (GLB or GLTF)
     if (project) {
-      console.log(project.model)
+      // Load the provided model
       loader.load(
-        project.model,
+        project,
         (gltf) => {
           modelRef.current = gltf.scene;
-          gltf.scene.position.set(0, 0, -10);
-          gltf.scene.scale.set(8, 8, 8);
+          gltf.scene.position.set(2, 1, 0);
+          gltf.scene.scale.set(1, 1, 1);
           scene.add(gltf.scene);
         },
-        undefined,
+        (xhr) => {
+          // console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+        },
         (error) => {
           console.error('Error loading model', error);
         }
       );
     } else {
+      // Load local model
       loader.load(
-        '/dummyModels/test2.glb',
+        '/dummyModels/test.glb',
         (gltf) => {
           modelRef.current = gltf.scene;
-          gltf.scene.position.set(0, 0, 0);
-          gltf.scene.scale.set(5, 5, 5);
+          gltf.scene.position.set(2, 1, 0);
+          gltf.scene.scale.set(1, 1, 1);
           scene.add(gltf.scene);
         },
-        undefined,
+        (xhr) => {
+          // console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+        },
         (error) => {
           console.error('Error loading local model', error);
         }
       );
-      
-      
-      
     }
 
     camera.position.z = 5;

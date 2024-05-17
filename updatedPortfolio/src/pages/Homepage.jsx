@@ -10,11 +10,14 @@ import React, { useState, useEffect } from 'react';
 
 import '../pages/HomePage.css'
 
-const HomePage = ({data}) => {
+const HomePage = ({ data }) => {
 
-  //!where code starts :p
+  console.log('there are', data.length, 'pieces of data')
 
   const [loading, setLoading] = useState(true); // State to manage loading
+  const [viewMore, setViewMore] = useState(false); // State to manage "View More" button
+  const [activeFilter, setActiveFilter] = useState('All'); // State to manage active filter
+  const [filteredData, setFilteredData] = useState(data); // State to manage filtered data
 
   useEffect(() => {
     //* Simulate a delay to show the loading screen
@@ -26,15 +29,11 @@ const HomePage = ({data}) => {
     return () => clearTimeout(timeout);
   }, []);
 
-  //*State set to false so the view more button doesnt open up without a user
-  const [viewMore, setViewMore] = useState(false);
+  //end of loading screen
 
   const toggleViewMore = () => {
     setViewMore(!viewMore);
   };
-
-  //*explained via tours
-  const [filteredData, setFilteredData] = useState(data);
 
   const filterData = (category) => {
     if (category === 'All') {
@@ -45,19 +44,26 @@ const HomePage = ({data}) => {
     }
   };
 
+  useEffect(() => {
+    filterData(activeFilter);
+  }, [activeFilter, data]); // Run filterData whenever activeFilter or data changes
+
+  useEffect(() => {
+    filterData('All'); // Call filterData with 'All' when the component mounts
+  }, []); // Empty dependency array ensures it runs only once, when the component mounts
+
   return (
-  
     <div className='homePageMainDiv'>
-            {loading ? ( // Conditionally render the LoadingScreen component
+      {loading ? ( // Conditionally render the LoadingScreen component
         <LoadingScreen />
       ) : (
-      <>
-        <Navbar HomeLocation='/' AboutLocation='/about'/>
-        <Section1 />
-        <Section2 filterData={filterData} />
-        <Section3 data={filteredData} viewMore={viewMore} />
-        <Section4 toggleViewMore={toggleViewMore} viewMore={viewMore}></Section4>
-      </>
+        <>
+          <Navbar HomeLocation='/' AboutLocation='/about' />
+          <Section1 />
+          <Section2 filterData={filterData} setActiveFilter={setActiveFilter} activeFilter={activeFilter} />
+          <Section3 data={filteredData} viewMore={viewMore} />
+          <Section4 toggleViewMore={toggleViewMore} viewMore={viewMore}></Section4>
+        </>
       )}
     </div>
   );

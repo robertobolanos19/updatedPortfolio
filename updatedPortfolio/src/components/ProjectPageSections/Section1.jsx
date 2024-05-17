@@ -9,7 +9,7 @@ const Section1 = ({model, name, description, image }) => {
   console.log(model)
   return (
     <div className='projectSection1'>
-        <ThreeJsBanner/>
+        <ThreeJsBanner project={model}/>
         <div className="container">
             <div className="content">
                 <Header title={name}/>
